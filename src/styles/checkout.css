@@ -1,0 +1,30 @@
+/* general styling */
+.checkout__container 
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem;
+    margin: 1.25rem;
+    width: 75%;
+
+}
+
+/* styling the upper side of the checkout page */
+
+.checkout__UPside
+{
+    display: flex;
+    background-color: #ffff;
+    padding-left: 1rem; padding-bottom: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+.checkout__title
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* the down side styling is in subtotal.css file :)  */
