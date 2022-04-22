@@ -6,25 +6,33 @@ import "../styles/checkout.css";
 
 function Checkout() {
   return (
-    <div className="checkout__container" >
+    <div className="checkout" >
 
-        {/* this is the upper side of the checkout page wich contains the products list*/}
+        {/* this is the left side of the checkout page wich contains the products list*/}
 
-        <div className='checkout__UPside'>
-            <div className='checkout__title'>
+        <div className="checkout__leftSide">
 
-                <h2 className='checkout__title'>Your shoping cart</h2>
-                {/* Products list */}
+          <div className='checkout__basket'>
+    
+            <h2 className='checkout__title'>Your shoping cart :</h2>
 
-                <Product />
+          {/* Products list */}
 
-            </div>
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+
+
+
+          </div>
+
         </div>
 
-        {/* this is the down side of the checkout page wich contains the total price */}
+        {/* this is the right side of the checkout page wich contains the total price */}
 
         
-        <Subtotal  />
+        <Subtotal />
         
         
 
