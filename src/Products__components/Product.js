@@ -26,7 +26,7 @@ function Product( {title, price, rating , image} ) {
     <img 
       src='https://m.media-amazon.com/images/I/41shZGS-G+L.jpg'
       alt='thinking fast and slow book cover'
-      className='product__image product__info'
+      className='product__image product__info  '
     />
     
     {/* add to basket button */}
