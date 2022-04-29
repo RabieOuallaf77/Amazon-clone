@@ -9,7 +9,6 @@ import Checkout from './Main__components/Checkout';
 function App() {
   return (
     <div className="App">
-
       <Router>
         <Header />
        <Routes>
@@ -21,7 +20,6 @@ function App() {
       element={(
         <>
           <Home />
-          
         </>
       )}
     />

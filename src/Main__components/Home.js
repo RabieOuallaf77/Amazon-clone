@@ -19,7 +19,11 @@ function Home() {
 
             {/* First row */}
             <div className='home__row'>
-                <Product />
+                <Product
+                title={"IGO is the enemy"}
+                price={12.5}
+                rating={4.8}
+                 />
                 <Product />
 
             </div>

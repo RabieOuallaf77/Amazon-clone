@@ -1,18 +1,38 @@
 import React from 'react';
 import ReactStars from 'react-rating-stars-component';
+import { useStateValue } from '../Special_components/MyContext';
 import '../styles/product.css';
 
 
-function Product( {title, price, rating , image} ) {
+function Product( {title, price, rating, img} ) {
+
+  const [dispatch] = useStateValue()
+
+  
+
+  const AddtoBasket = () => {
+    // dispatch the item to the data layer
+    
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        title: title,
+        price: price,
+        rating: rating,
+      },
+      
+    });
+  };
+
   return (
   <div className='product'>
     {/* Product info (name, price) */}
 
     <div className='product__info'>
-        <p> Thinking, Fast and Slow </p>
+        <p> {title} </p>
         <p className='product__price'>
             <small>$</small>
-            <strong>29.99</strong>
+            <strong>{price}</strong>
         </p>
     </div>
 
@@ -31,7 +51,7 @@ function Product( {title, price, rating , image} ) {
     
     {/* add to basket button */}
     
-    <button>Add to basket</button>
+    <button onClick={AddtoBasket} >Add to basket</button>
   </div>
   )
 }

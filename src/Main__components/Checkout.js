@@ -5,6 +5,8 @@ import "../styles/checkout.css";
 
 
 function Checkout() {
+
+
   return (
     <div className="checkout" >
 
@@ -18,11 +20,8 @@ function Checkout() {
 
           {/* Products list */}
 
+            
             <Product />
-            <Product />
-            <Product />
-            <Product />
-
 
 
           </div>

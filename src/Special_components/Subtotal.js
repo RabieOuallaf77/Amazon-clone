@@ -2,12 +2,16 @@ import React from 'react'
 import CurrencyFormat from 'react-currency-format';
 
 import '../styles/subtotal.css';
+import { useStateValue } from './MyContext';
 
 function Subtotal() {
+    
+    const [{basket}] = useStateValue()
+    
     return(
         <div className='subtotal'>
             <CurrencyFormat
-        value={1250}
+        value={12.5}
         displayType={"text"}
         prefix={'$'}
         thousandSeparator={true}
@@ -16,7 +20,7 @@ function Subtotal() {
             <>
             {/* show the total value */}
                 <p>
-                Subtotal (0 items) <strong> {value} </strong>
+                Subtotal ({basket.length} items) <strong> {value} </strong>
                 </p>
             {/* checkbox line */}
                 <small className="subtotal__gift">
