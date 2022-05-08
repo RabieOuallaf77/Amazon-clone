@@ -43,17 +43,21 @@ function Header() {
       <div className='nav__options__countainer'>
 
       {/* Option 1 */}
-        <div className='header__option' >
+        
+          <div className='header__option' >
 
-          <span className='option__Ftext'>
-            Hello
-          </span>
+            <span className='option__Ftext'>
+              Hello
+            </span>
+          <Link to='/login'>
+            <span className='option__Stext'>
+              singin!
+            </span>
 
-          <span className='option__Stext'>
-            singin!
-          </span>
-
-        </div>
+          </Link>
+            
+          </div>
+  
 
       {/* Option 2 */}
         <div className='header__option' >

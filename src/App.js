@@ -1,16 +1,17 @@
 import './App.css';
 import Header from './Main__components/Header';
 import Home from './Main__components/Home';
+import Login from './Main__components/Login';
 import {BrowserRouter as Router , Routes, Route} from "react-router-dom"
 import React from 'react';
 import Checkout from './Main__components/Checkout';
+
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
        <Routes>
 
          {/* route for the main page */}
@@ -19,6 +20,7 @@ function App() {
       path='/'
       element={(
         <>
+          <Header />
           <Home />
         </>
       )}
@@ -29,14 +31,25 @@ function App() {
         path='/checkout'
         element={(
           <>
-
+            <Header />
             <Checkout />
             
           </>
         )}
       />
+
+        {/* route for the login page */}
+      <Route 
+          path='/login'
+          element={(
+            <>
+              <Login />
+            </>
+          )}
+        />
        </Routes>
 
+        
       </Router>
 
 
