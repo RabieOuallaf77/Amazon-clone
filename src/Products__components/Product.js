@@ -4,20 +4,21 @@ import { useStateValue } from '../Special_components/MyContext';
 import '../styles/product.css';
 
 
-function Product( {title, price, rating, img} ) {
+function Product( {id,title, price, rating, img} ) {
 
-  const [dispatch] = useStateValue()
+  const [{basket} ,dispatch] = useStateValue()
 
   
 
   const AddtoBasket = () => {
-    // dispatch the item to the data layer
     
     dispatch({
       type: 'ADD_TO_BASKET',
       item: {
+        id: id,
         title: title,
         price: price,
+        img: img,
         rating: rating,
       },
       
@@ -43,10 +44,11 @@ function Product( {title, price, rating, img} ) {
 
     {/* Product image */}
 
-    <img 
-      src='https://m.media-amazon.com/images/I/41shZGS-G+L.jpg'
-      alt='thinking fast and slow book cover'
-      className='product__image product__info  '
+    <img
+      src={img}
+      alt='product img'
+      className='product__image product__info'
+
     />
     
     {/* add to basket button */}

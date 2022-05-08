@@ -1,28 +1,13 @@
 import React, { useReducer } from 'react'
 import MyContext from './MyContext'
-/*
-function MyProvider() {
-  return (
-    
-    <MyContext.Provider 
-        value={useReducer({reducer, initialState})}
-    >
-        {children}
-        
-    </MyContext.Provider>
-
-  )
-}
-
-
-*/
-
 
 
 const MyProvider = ({reducer, initialState, children}) => {
   return(
     <MyContext.Provider value={useReducer(reducer, initialState)} >
-      {children}
+
+     {children}
+
     </MyContext.Provider>
   )
 

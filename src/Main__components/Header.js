@@ -91,7 +91,7 @@ function Header() {
           </Link>
 
         </div>
-        <span className='shoppingbasket__counter header__optionSpecial'>{basket.length}</span>
+        <span className='shoppingbasket__counter header__optionSpecial'>{basket?.length}</span>
         
       </div>
 

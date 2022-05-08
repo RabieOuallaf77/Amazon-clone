@@ -10,10 +10,10 @@ import reducer, { initialState } from './Special_components/reducer';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
+        
         <MyProvider initialState={initialState} reducer={reducer}>
             <App />
         </MyProvider>
-        
         
     </React.StrictMode>
 
