@@ -24,22 +24,18 @@ function Login() {
                 <h1>sing-in</h1>
                 <h5>Email or mobile phone number</h5>
                 <input 
-                    placeholder='Enter your email'
                     type='text'
                 />
 
-                    {/* password input */}
-
-                <h5>password</h5>
-                <input 
-                    placeholder='Enter your password'
-                    type='password'
-                />
-                </div>
                     {/* singin button */}
-                    
-                <button>Sing in</button>
-            
+                <Link to='password'>
+                    <button>Continue</button>
+                </Link>
+                
+
+                
+            </div>
+            {/* Dont forget to add a footer later!! */}
         </div>
     </div>
   )
