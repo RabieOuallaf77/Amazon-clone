@@ -8,7 +8,7 @@ import { useStateValue } from '../Special_components/MyContext';
 
 
 function Header() {
-  const [{basket}] = useStateValue();
+  const [{basket}] = useStateValue('');
 
   return (
     <div className='header'>

@@ -2,6 +2,7 @@ export const initialState = {
     basket: [], 
 };
 
+
 // This functions is responsible of calculating to the total price of all the items; 
 
 export const getBasketTotal = (basket) => basket?.reduce( (total, item) => item.price + total , 0 )
