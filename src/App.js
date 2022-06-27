@@ -5,7 +5,6 @@ import Login from './Main__components/Login';
 import {BrowserRouter as Router , Routes, Route} from "react-router-dom"
 import React from 'react';
 import Checkout from './Main__components/Checkout';
-import LoginPassword from './Main__components/LoginPassword';
 
 
 
@@ -52,7 +51,6 @@ function App() {
         path="/login/password"
         element={(
           <>
-            <LoginPassword />
           </>
         )}
       />

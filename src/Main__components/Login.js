@@ -1,19 +1,31 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import {db, auth} from '../firebase.js' 
 import '../styles/login.css'
 
 
 
 function Login() {
 
+    // Storing user's data
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState();
 
 
+    // to not refresh the page
     const register = e => {
         e.preventDefault();
-        
 
+        auth.createUserWithEmailAndPassword(email, password)
+            .then( (auth) => {
+                console.log(auth);
+            })
+            .catch(error => alert(error.message));
+    };
+
+    const login = e => {
+        e.preventDefault();
     };
 
   return (
@@ -46,13 +58,13 @@ function Login() {
                 <input 
                     type='password'
                     value={password}
-                    onChange={ (e) => e.target.value}
+                    onChange={ (e) => setPassword(e.target.value)}
                 />
 
                     {/* singin button */}
-                    <Link to='/'>
-                        <button onClick={Login}>Continue</button>
-                    </Link>
+                <Link to='/'>
+                    <button onClick={Login}>Continue</button>
+                </Link>
 
                 
             </div>
