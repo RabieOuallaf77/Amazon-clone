@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import {db, auth} from '../firebase.js' 
+import {auth , db} from '../firebase';
 import '../styles/login.css'
 
 
@@ -12,7 +12,7 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState();
 
-
+ 
     // to not refresh the page
     const register = e => {
         e.preventDefault();
@@ -23,7 +23,7 @@ function Login() {
             })
             .catch(error => alert(error.message));
     };
-
+ 
     const login = e => {
         e.preventDefault();
     };
